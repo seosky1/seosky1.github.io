@@ -441,29 +441,6 @@
         color: var(--muted);
       }
 
-      .bottom-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-      }
-
-      .bottom-links a {
-        display: inline-flex;
-        min-height: 42px;
-        align-items: center;
-        border: 1px solid var(--hairline);
-        border-radius: 9999px;
-        padding: 10px 16px;
-        color: var(--ink);
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.29;
-        text-decoration: none;
-      }
-
       .ai-usage {
         display: grid;
         gap: 16px;
@@ -480,6 +457,10 @@
       .ai-usage strong {
         color: var(--ink);
         font-weight: 600;
+      }
+
+      .mobile-bottom-nav {
+        display: none;
       }
 
       .site-footer {
@@ -518,6 +499,10 @@
       }
 
       @media (max-width: 744px) {
+        body {
+          padding-bottom: 74px;
+        }
+
         .nav,
         .page,
         .site-footer {
@@ -551,13 +536,49 @@
           width: 100%;
         }
 
-        .bottom-links {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .mobile-bottom-nav {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 30;
+          display: block;
+          border-top: 1px solid var(--hairline);
+          background: rgba(255, 255, 255, 0.96);
+          padding: 8px 12px max(8px, env(safe-area-inset-bottom));
+          backdrop-filter: blur(16px);
         }
 
-        .bottom-links a {
+        .mobile-bottom-nav ul {
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: max-content;
+          gap: 8px;
+          margin: 0;
+          padding: 0;
+          overflow-x: auto;
+          list-style: none;
+          scrollbar-width: none;
+        }
+
+        .mobile-bottom-nav ul::-webkit-scrollbar {
+          display: none;
+        }
+
+        .mobile-bottom-nav a {
+          display: inline-flex;
+          min-height: 42px;
+          align-items: center;
           justify-content: center;
+          border: 1px solid var(--hairline);
+          border-radius: 9999px;
+          padding: 10px 14px;
+          color: var(--ink);
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.23;
+          text-decoration: none;
+          white-space: nowrap;
         }
 
         .resume-card .button {
@@ -733,21 +754,6 @@
         </dl>
       </section>
 
-      <section class="section" id="links" aria-labelledby="links-title">
-        <div class="section-heading">
-          <h2 id="links-title">Links</h2>
-        </div>
-
-        <ul class="bottom-links" aria-label="Page links">
-          <li><a href="#introduction">Intro</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#projects">Projects and Activities</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#ai-usage">AI Usage</a></li>
-        </ul>
-      </section>
-
       <section class="section" id="ai-usage" aria-labelledby="ai-usage-title">
         <div class="section-heading">
           <h2 id="ai-usage-title">AI Usage</h2>
@@ -768,5 +774,16 @@
     <footer class="site-footer">
       <p>&copy; 2026 Seo Hyeon Seo. Built as a static GitHub Pages site.</p>
     </footer>
+
+    <nav class="mobile-bottom-nav" aria-label="Mobile section navigation">
+      <ul>
+        <li><a href="#introduction">Intro</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#ai-usage">AI Usage</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
