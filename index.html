@@ -295,7 +295,7 @@
 
       .section-heading {
         display: grid;
-        grid-template-columns: minmax(180px, 0.35fr) minmax(0, 0.65fr);
+        grid-template-columns: 1fr;
         gap: 32px;
         align-items: start;
         margin-bottom: 32px;
@@ -537,7 +537,7 @@
         <ul class="nav-links">
           <li><a href="#introduction" aria-current="page">Intro</a></li>
           <li><a href="#resume">Resume</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Projects and Activities</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -570,10 +570,6 @@
       <section class="section" id="resume" aria-labelledby="resume-title">
         <div class="section-heading">
           <h2 id="resume-title">Resume</h2>
-          <p>
-            A CV-based summary of education, skills, and experience. The full
-            PDF remains available as a static repository asset.
-          </p>
         </div>
 
         <div class="detail-grid">
@@ -606,11 +602,7 @@
 
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <h2 id="projects-title">Projects</h2>
-          <p>
-            Activities and projects listed from the CV, including software work
-            and security-focused learning.
-          </p>
+          <h2 id="projects-title">Projects and Activities</h2>
         </div>
 
         <div class="card-grid">
@@ -637,26 +629,12 @@
             </div>
           </a>
 
-          <a class="listing-card" href="#contact">
-            <div class="card-photo" aria-hidden="true">03</div>
-            <div class="card-copy">
-              <h3>Personal Security Projects</h3>
-              <p>
-                Ongoing self-directed work to understand offensive and defensive
-                security techniques at a low level.
-              </p>
-            </div>
-          </a>
         </div>
       </section>
 
       <section class="section" id="courses" aria-labelledby="courses-title">
         <div class="section-heading">
           <h2 id="courses-title">Planned Courses</h2>
-          <p>
-            Courses I plan to take, based on the areas listed in my CV and
-            current academic interests.
-          </p>
         </div>
 
         <div class="detail-grid">
@@ -680,31 +658,9 @@
         </div>
       </section>
 
-      <section class="section" id="cv" aria-labelledby="cv-title">
-        <div class="section-heading">
-          <h2 id="cv-title">CV PDF</h2>
-          <p>
-            The downloadable resume is stored directly in this repository for
-            GitHub Pages compatibility.
-          </p>
-        </div>
-
-        <div class="resume-card">
-          <div>
-            <h3>Curriculum Vitae</h3>
-            <p>PDF format, linked from <code>assets/cv.pdf</code>.</p>
-          </div>
-          <a class="button button-primary" href="assets/cv.pdf" download>Download CV</a>
-        </div>
-      </section>
-
       <section class="section" id="contact" aria-labelledby="contact-title">
         <div class="section-heading">
           <h2 id="contact-title">Contact</h2>
-          <p>
-            Contact details from the CV and public profile. These are listed as
-            plain text instead of button-style links.
-          </p>
         </div>
 
         <dl class="plain-contact">
