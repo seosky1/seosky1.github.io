@@ -441,6 +441,29 @@
         color: var(--muted);
       }
 
+      .bottom-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .bottom-links a {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        border: 1px solid var(--hairline);
+        border-radius: 9999px;
+        padding: 10px 16px;
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.29;
+        text-decoration: none;
+      }
+
       .ai-usage {
         display: grid;
         gap: 16px;
@@ -526,6 +549,15 @@
 
         .button {
           width: 100%;
+        }
+
+        .bottom-links {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .bottom-links a {
+          justify-content: center;
         }
 
         .resume-card .button {
@@ -699,6 +731,21 @@
             <dd><a href="assets/cv.pdf" download>Download CV</a></dd>
           </div>
         </dl>
+      </section>
+
+      <section class="section" id="links" aria-labelledby="links-title">
+        <div class="section-heading">
+          <h2 id="links-title">Links</h2>
+        </div>
+
+        <ul class="bottom-links" aria-label="Page links">
+          <li><a href="#introduction">Intro</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#projects">Projects and Activities</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#ai-usage">AI Usage</a></li>
+        </ul>
       </section>
 
       <section class="section" id="ai-usage" aria-labelledby="ai-usage-title">
