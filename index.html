@@ -441,6 +441,24 @@
         color: var(--muted);
       }
 
+      .ai-usage {
+        display: grid;
+        gap: 16px;
+        border: 1px solid var(--hairline);
+        border-radius: 14px;
+        padding: 24px;
+      }
+
+      .ai-usage p {
+        margin: 0;
+        color: var(--body);
+      }
+
+      .ai-usage strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
       .site-footer {
         width: min(1280px, calc(100% - 48px));
         margin: 0 auto;
@@ -544,6 +562,7 @@
           <li><a href="#projects">Projects and Activities</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#ai-usage">AI Usage</a></li>
         </ul>
         <a class="button button-secondary nav-action" href="assets/cv.pdf" download>Download CV</a>
       </nav>
@@ -680,6 +699,22 @@
             <dd><a href="assets/cv.pdf" download>Download CV</a></dd>
           </div>
         </dl>
+      </section>
+
+      <section class="section" id="ai-usage" aria-labelledby="ai-usage-title">
+        <div class="section-heading">
+          <h2 id="ai-usage-title">AI Usage</h2>
+        </div>
+
+        <div class="ai-usage">
+          <p><strong>Tool:</strong> ChatGPT Codex</p>
+          <p>
+            <strong>Prompt:</strong> Read assets/cv.pdf first and use its contents as the
+            source of truth for all personal information on the website. Do not use
+            placeholder text. If any information is missing, clearly tell me what is
+            missing instead of inventing content.
+          </p>
+        </div>
       </section>
     </main>
 
