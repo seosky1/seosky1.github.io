@@ -288,62 +288,6 @@
         object-position: center top;
       }
 
-      .guest-badge {
-        position: absolute;
-        left: 16px;
-        top: 16px;
-        border-radius: 9999px;
-        background: var(--canvas);
-        box-shadow: var(--shadow);
-        color: var(--ink);
-        padding: 7px 12px;
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.18;
-      }
-
-      .save-dot {
-        position: absolute;
-        right: 16px;
-        top: 16px;
-        width: 32px;
-        height: 32px;
-        border: 1px solid rgba(34, 34, 34, 0.14);
-        border-radius: 9999px;
-        background: var(--canvas);
-        box-shadow: var(--shadow);
-      }
-
-      .save-dot::before {
-        position: absolute;
-        inset: 10px;
-        border-radius: 9999px;
-        background: var(--primary);
-        content: "";
-      }
-
-      .profile-meta {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 8px;
-        margin-top: 12px;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.43;
-      }
-
-      .profile-meta strong {
-        color: var(--ink);
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.25;
-      }
-
-      .rating {
-        color: var(--ink);
-        font-weight: 600;
-      }
-
       .search-pill {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
@@ -672,7 +616,7 @@
 
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="#introduction" aria-label="Seo Hyeon Seo home">Seo Hyeon Seo</a>
+        <a class="brand" href="#introduction" aria-label="Personal resume home">Personal Resume</a>
         <ul class="nav-links">
           <li><a href="#introduction" aria-current="page">Intro</a></li>
           <li><a href="#resume">Resume</a></li>
@@ -703,15 +647,6 @@
 
         <figure class="profile-card" aria-label="Profile photo and summary">
           <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Seo Hyeon Seo">
-          <figcaption class="profile-meta">
-            <span>
-              <strong>Seo Hyeon Seo</strong><br>
-              Seoul National University
-            </span>
-            <span class="rating" aria-label="Profile highlight">5.0</span>
-          </figcaption>
-          <span class="guest-badge">Profile</span>
-          <span class="save-dot" aria-hidden="true"></span>
         </figure>
       </section>
 
