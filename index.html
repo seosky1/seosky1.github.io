@@ -282,65 +282,10 @@
       .profile-photo {
         display: block;
         width: 100%;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 4 / 5;
         border-radius: 14px;
         object-fit: cover;
         object-position: center top;
-      }
-
-      .search-pill {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
-        align-items: center;
-        min-height: 64px;
-        margin: 0 auto 64px;
-        border: 1px solid var(--hairline);
-        border-radius: 9999px;
-        background: var(--canvas);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-
-      .search-segment {
-        min-width: 0;
-        padding: 10px 24px;
-      }
-
-      .search-segment + .search-segment {
-        border-left: 1px solid var(--hairline);
-      }
-
-      .search-label {
-        display: block;
-        color: var(--ink);
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.29;
-      }
-
-      .search-value {
-        display: block;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.43;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .search-orb {
-        display: inline-flex;
-        width: 48px;
-        height: 48px;
-        align-items: center;
-        justify-content: center;
-        margin-right: 8px;
-        border-radius: 9999px;
-        background: var(--primary);
-        color: var(--on-primary);
-        font-size: 22px;
-        font-weight: 700;
-        text-decoration: none;
       }
 
       .section {
@@ -547,34 +492,6 @@
           font-size: clamp(30px, 9vw, 42px);
         }
 
-        .search-pill {
-          display: flex;
-          min-height: 56px;
-          margin-bottom: 48px;
-          padding: 8px;
-        }
-
-        .search-segment {
-          flex: 1 1 auto;
-          padding: 6px 14px;
-        }
-
-        .search-segment:not(:first-child) {
-          display: none;
-        }
-
-        .search-segment + .search-segment {
-          border-left: 0;
-        }
-
-        .search-orb {
-          flex: 0 0 40px;
-          width: 40px;
-          height: 40px;
-          margin-right: 0;
-          font-size: 18px;
-        }
-
         .section {
           padding: 48px 0;
         }
@@ -648,22 +565,6 @@
         <figure class="profile-card" aria-label="Profile photo and summary">
           <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Seo Hyeon Seo">
         </figure>
-      </section>
-
-      <section class="search-pill" aria-label="Page sections">
-        <a class="search-segment" href="#resume">
-          <span class="search-label">Where</span>
-          <span class="search-value">Education and skills</span>
-        </a>
-        <a class="search-segment" href="#projects">
-          <span class="search-label">When</span>
-          <span class="search-value">Projects and activities</span>
-        </a>
-        <a class="search-segment" href="#courses">
-          <span class="search-label">Who</span>
-          <span class="search-value">Planned courses</span>
-        </a>
-        <a class="search-orb" href="#resume" aria-label="Go to resume section">Go</a>
       </section>
 
       <section class="section" id="resume" aria-labelledby="resume-title">
